@@ -22,5 +22,15 @@ export class PostsService {
     this.id++;
     return this.arrPosts;
   }
+  
+    getById(pId:number): Post | any{
+    
+      return this.arrPosts.find(post => post.id === pId)
+  }
 
-}
+    getPostByCategorias(pCat:number){
+      return this.arrPosts.filter(post => post.categoria === pCat)
+            
+    }
+  }
+  

@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow border-4 border-bottom border-warning p-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow border-4 border-bottom border-primary p-3">
   <div class="container-fluid">
     <a class="navbar-brand"  [routerLink]="['home']">
-    <img class="logo" src="../../../assets/images/Logo.png" alt="" >
+    <img class="logo" src="https://factoryfy.es/wp-content/uploads/diseno-logotipo-viajar-vacaciones-diversion.jpg" alt="" >
     </a>
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,8 +14,8 @@
         
         <div class="d-flex ms-auto">
 
-          <button class="btn btn-outline-success ms-3" [routerLink]="['/new']">Agregar Post</button>
-          <button class="btn btn-outline-success ms-3">Ordenar por Fecha</button>
+          <button class="btn btn-outline-primary ms-3" [routerLink]="['/new']">Agregar Post</button>
+          <button class="btn btn-outline-primary ms-3">Ordenar por Fecha</button>
           
         
         
@@ -23,17 +23,12 @@
       
     </div>
     <div class="ms-3">
-      <select  class="form-select" name="categoria" id="categoria" title="categoria">
-        <option value="none">Seleciona una categoría</option>
-        <option value="Playa">Playa</option>
-        <option value="Montaña">Montaña</option>
-        <option value="Ciudad">Ciudad</option>
-        <option value="Rural">Rural</option>
-        <option value="Festivales">Festivales</option>
-      
-        
-
-      </select>
+      <select (change)="filtrar($event)" name="categoria" class="form-select" title="selector">
+      <option value="">Seleccione un título</option>
+      <option  *ngFor="let categoria of categorias" [value]="categoria.id" >
+        {{categoria.titulo}}
+      </option>
+    </select>
     </div>
   </div>
 </nav>
