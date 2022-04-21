@@ -1,0 +1,10 @@
+.imagen{
+  height: 450px;
+  background-position: top;
+  background-size: cover;
+  margin-left: 5px;
+  display: block;
+  gap: 5px;
+  
+  }
+  

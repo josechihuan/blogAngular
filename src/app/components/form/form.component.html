@@ -1,0 +1,59 @@
+<p>form works!</p>
+<section  class="container mt-5 p-4 bg-success">
+
+  <h1>Post</h1>
+  <hr>
+  <form novalidate [formGroup]="formulario" (ngSubmit)="recogerDatos()" >
+    <div>
+      
+      <label for="titulo" class="form-label">Titulo Post</label>
+      <input class="form-control" type="text" id="titulo" formControlName="titulo"placeholder="introduce título de tu post">
+     <small class="text-danger" *ngIf="checkControl('titulo', 'required')">El nombre es requerido</small>
+     <small class="text-danger" *ngIf="checkControl('titulo', 'minlength')">El nombre tiene que tener mas de dos caracteres</small>
+
+    </div>
+    <div>
+
+      <label for="autor" class="form-label">Nombre Autor</label>
+      <input class="form-control" type="text" id="autor" formControlName="autor"placeholder="introduce tus apellidos">
+    </div>
+
+    
+    
+    <div>
+
+      <label for="texto" class="form-label" >texto</label>
+      <input class="form-control" type="text" id="texto" formControlName="texto"placeholder="introduce tu mail">
+      <small class="text-danger" *ngIf="checkControl('texto', 'required')">El texto requerido</small>
+      <small class="text-danger" *ngIf="checkControl('texto', 'pattern')">El texto no tiene formato válido</small>
+    </div>
+    <div>
+
+      <label for="fecha" class="form-label" >fecha</label>
+      <input class="form-control" type="date" id="fecha" formControlName="fecha" placeholder="introduce la fecha">
+
+
+      <small class="text-danger" *ngIf="checkControl('fecha', 'required')">El texto requerido</small>
+     <small class="text-danger" *ngIf="checkControl('fecha', 'pattern')">El texto no tiene formato válido</small>
+    </div>
+    <div>
+
+      <label for="imagen" class="form-label">Imgamen</label>
+      <input class="form-control" type="text" id="imagen" formControlName="imagen"placeholder="introduce tu foto">
+    </div>
+
+    <div>
+
+      <label for="categoria" class="form-label" >categoria</label>
+      <input class="form-control" type="text" id="categoria" formControlName="categoria"placeholder="introduce una categoria">
+      <small class="text-danger" *ngIf="checkControl('categoria', 'required')">El texto requerido</small>
+  <small class="text-danger" *ngIf="checkControl('categoria', 'pattern')">El texto no tiene formato válido
+
+  </small>
+    </div>
+     <input type="submit" value="Guardar" class="btn btn-danger mt-3" [disabled]="!formulario.valid">
+
+
+
+  </form>
+</section>
