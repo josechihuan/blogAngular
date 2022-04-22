@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   this.categorias=this.categoriasService.getAllCategorias();
 
   }
-  filtrar($event:any){
+  filtrarPorCategoria($event:any){
       
       this.router.navigate(['/categoria', $event.target.value])
       console.log($event.target.value)
