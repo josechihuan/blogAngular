@@ -23,12 +23,13 @@
       
     </div>
     <div class="ms-3">
-      <select (change)="filtrar($event)" name="categoria" class="form-select" title="selector">
-      <option value="">Seleccione un título</option>
-      <option  *ngFor="let categoria of categorias" [value]="categoria.id" >
+      <select (change)="filtrarPorCategoria($event)" name="categoria" class="form-select" title="selector">
+      <option value="">Seleccione un Categoría</option>
+      <option  *ngFor="let categoria of categorias" [value]="categoria.titulo" >
         {{categoria.titulo}}
       </option>
     </select>
     </div>
   </div>
 </nav>
+

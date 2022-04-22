@@ -9,7 +9,7 @@ texto:'viajes de aventura con todo incluído',
 autor:'Pedro García',
 imagen:'https://www.40defiebre.com/wp-content/uploads/2015/10/5-magdeleine.jpg',
 fecha: '10/12/2022',
-categoria:1,
+categoria:'playa' ,
   
 },
 {
@@ -19,8 +19,7 @@ categoria:1,
  autor:'Ernesto Puera',
  imagen:'https://www.40defiebre.com/wp-content/uploads/2015/10/2-findAphoto.jpg',
  fecha: '10/12/2022',
- categoria:2,
-   
+ categoria:'montaña',
  },
  {
   id:3,
@@ -29,7 +28,7 @@ categoria:1,
  autor:'Miguel Sánchez',
  imagen:'https://www.40defiebre.com/wp-content/uploads/2015/10/6-New-Old-Stock.jpg',
  fecha: '10/12/2022',
- categoria:3,
+ categoria:'ciudad',
    
  },
  {
@@ -39,7 +38,7 @@ categoria:1,
  autor:'María Coronel',
  imagen:'https://www.40defiebre.com/wp-content/uploads/2015/10/4-lifeofpix.jpg',
  fecha: '10/12/2022',
- categoria:4,
+ categoria:'rural',
    
  },
  {
@@ -49,7 +48,7 @@ categoria:1,
  autor:'Luis Mateo',
  imagen:'https://www.40defiebre.com/wp-content/uploads/2015/10/7-resplashed.jpg',
  fecha: '10/12/2022',
- categoria:5,
+ categoria:'festivales',
    
  },
 

@@ -20,11 +20,12 @@ export class HomeComponent implements OnInit {
    
     
   ngOnInit(): void {
+   
     this.posts = this.postsServices.getAll();
     this.activatedRoute.params.subscribe(params => {
      // console.log(params['categoriaTitulo'])
-      const categoria =params['categoriaId']
-      if (params['categoriaId']) {
+      const categoria =params['categoriaTitulo']
+      if (categoria) {
         this.posts = this.postsServices.getPostByCategorias(categoria)
         //console.log(this.posts)
       } else {

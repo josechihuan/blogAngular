@@ -28,7 +28,7 @@ export class PostsService {
       return this.arrPosts.find(post => post.id === pId)
   }
 
-    getPostByCategorias(pCat:number){
+    getPostByCategorias(pCat:string){
       return this.arrPosts.filter(post => post.categoria === pCat)
             
     }

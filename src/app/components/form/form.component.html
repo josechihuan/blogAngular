@@ -1,4 +1,4 @@
-<p>form works!</p>
+
 <section  class="container mt-5 p-4 bg-success">
 
   <h1>Post</h1>
@@ -15,7 +15,9 @@
     <div>
 
       <label for="autor" class="form-label">Nombre Autor</label>
-      <input class="form-control" type="text" id="autor" formControlName="autor"placeholder="introduce tus apellidos">
+      <input class="form-control" type="text" id="autor" formControlName="autor"placeholder="introduce tu nombre">
+      <small class="text-danger" *ngIf="checkControl('autor', 'required')">El nombre de autor  es requerido</small>
+      <small class="text-danger" *ngIf="checkControl('autor', 'minlength')">El nombre de autor debe tener más de dos caracteres</small>
     </div>
 
     
@@ -23,9 +25,9 @@
     <div>
 
       <label for="texto" class="form-label" >texto</label>
-      <input class="form-control" type="text" id="texto" formControlName="texto"placeholder="introduce tu mail">
+      <input class="form-control" type="text" id="texto" formControlName="texto"placeholder="introduce texto información">
       <small class="text-danger" *ngIf="checkControl('texto', 'required')">El texto requerido</small>
-      <small class="text-danger" *ngIf="checkControl('texto', 'pattern')">El texto no tiene formato válido</small>
+      <small class="text-danger" *ngIf="checkControl('texto', 'minlength')">El texto debe ser mas de un caracter</small>
     </div>
     <div>
 
@@ -34,8 +36,7 @@
 
 
       <small class="text-danger" *ngIf="checkControl('fecha', 'required')">El texto requerido</small>
-     <small class="text-danger" *ngIf="checkControl('fecha', 'pattern')">El texto no tiene formato válido</small>
-    </div>
+      </div>
     <div>
 
       <label for="imagen" class="form-label">Imgamen</label>

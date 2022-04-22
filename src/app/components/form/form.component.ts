@@ -11,6 +11,7 @@ import { PostsService } from 'src/app/services/posts.service';
 export class FormComponent implements OnInit {
 
   formulario: FormGroup;
+
   constructor(private postsService: PostsService,
     private router: Router,
     private activateRoute: ActivatedRoute
@@ -21,8 +22,13 @@ export class FormComponent implements OnInit {
         Validators.required,
         Validators.minLength(2)
       ]),
-      texto: new FormControl('', []),
-      autor: new FormControl('', []),
+      texto: new FormControl('', [
+        Validators.required,
+        Validators.minLength(5)]),
+      autor: new FormControl('', [
+        Validators.required,
+        Validators.minLength(2)
+      ]),
       imagen: new FormControl('', []),
       fecha: new FormControl('', []),
       categoria: new FormControl('', []),
